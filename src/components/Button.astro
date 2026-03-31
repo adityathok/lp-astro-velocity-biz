@@ -23,10 +23,7 @@ const colorClass = colorMap[color] || colorMap.primary;
         x-data="{ loading: false }"
         @click="loading = true"
     >
-        <span x-show="!loading">
-            <slot />
-        </span>
-        <span x-show="loading">Loading...</span>
+        <slot />
     </a>
 ) : (
     <button 
@@ -35,9 +32,6 @@ const colorClass = colorMap[color] || colorMap.primary;
         x-data="{ loading: false }"
         @click="loading = true"
     >
-        <span x-show="!loading">
-            <slot />
-        </span>
-        <span x-show="loading">Loading...</span>
+        <slot />
     </button>
 )}

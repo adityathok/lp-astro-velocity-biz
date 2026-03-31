@@ -4,36 +4,24 @@ import velocityLogo from '../assets/velocity-logo.webp';
 
 const menuHeader = [
     {
-        url:'/',
+        url:'/#hero',
         title: 'Home'
     },
     {
-        url:'/harga-web',
+        url:'/#paketweb',
         title: 'Harga Web'
     },
     {
-        url:'/cara-pesan-web',
-        title: 'Cara Pesan Web'
+        url:'/#review',
+        title: 'Testimoni'
     },
     {
-        url:'/klien-kami',
-        title: 'Klien Kami'
+        url:'/#faq',
+        title: 'FAQ'
     },
     {
-        url:'/pembayaran',
-        title: 'Pembayaran'
-    },
-    {
-        url:'/testimoni-klien',
-        title: 'Testimoni Klien'
-    },
-    {
-        url:'/artikel',
-        title: 'Blog'
-    },
-    {
-        url:'/kontak-kami',
-        title: 'Kontak Kami'
+        url:'/#contact',
+        title: 'Hubungi Kami'
     }
 ]
 ---
@@ -42,7 +30,7 @@ const menuHeader = [
     <nav class="px-4 lg:px-6 py-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
             <a href="/" class="flex items-center">
-                <Image src={velocityLogo} class="mr-3 h-6 sm:h-9" loading="eager" alt="Velocity Logo"/>
+                <Image src={velocityLogo} class="mr-3 w-30 sm:w-40" loading="eager" alt="Velocity Logo"/>
             </a>
             <div class="flex items-center lg:order-2 md:hidden">                    
                 <button @click="menuMobile = !menuMobile" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -56,7 +44,7 @@ const menuHeader = [
                 <ul class="flex flex-col mt-4 font-sm text-sm lg:flex-row lg:space-x-8 lg:mt-0">
                     {menuHeader.map((item) => ( 
                     <li v-for="menu in menuHeader">
-                        <a href={item.url} class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white hover:opacity-70" aria-current="page">
+                        <a href={item.url} class="md:px-10 py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white hover:opacity-70" aria-current="page">
                             {item.title}
                         </a>
                     </li>

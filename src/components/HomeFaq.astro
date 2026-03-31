@@ -51,10 +51,10 @@ const faqs = [
         </h2>
         <p class="text-center mb-6 md:mb-10">Pertanyaan yang sering ditanyakan seputar pembuatan website</p>
 
-        <div class="space-y-3" x-data="{ open: null }">            
+        <div class="space-y-1 md:space-y-3" x-data="{ open: null }">            
             {faqs.map((item,i) => (
                 <div class="group shadow hover:shadow-md rounded-xl bg-white">
-                    <button type="button" @click={`open === ${i} ? open = null : open = ${i}`} class="px-6 py-6 w-full flex items-center cursor-pointer gap-3 group-hover:text-sky-700">
+                    <button type="button" @click={`open === ${i} ? open = null : open = ${i}`} class="px-4 md:px-6 py-3 md:py-6 w-full flex items-center cursor-pointer gap-3 group-hover:text-sky-700">
                         <span class="text-blue-500">
                             <svg x-show={`open !== ${i}`} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>

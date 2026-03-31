@@ -2,6 +2,7 @@
 import '../styles/global.css'
 import HeaderMain from '../components/HeaderMain.astro';
 import FooterMain from '../components/FooterMain.astro';
+import FooterFloating from '../components/FooterFloating.astro';
 
 // Ambil path URL saat ini (misal: /about)
 const pathname = new URL(Astro.url).pathname;
@@ -57,6 +58,7 @@ const {
 		<HeaderMain currentPath={pathname} client:load/>
 			<slot />
 		<FooterMain />
+		<FooterFloating />
 	</div>
 	</body>
 </html>

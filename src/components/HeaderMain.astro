@@ -26,7 +26,18 @@ const menuHeader = [
 ]
 ---
 
-<header class="absolute top-0 left-0 w-full z-50" x-data="{ menuMobile: false }">
+<header 
+    class="fixed top-0 left-0 w-full z-50" 
+    x-data="{
+        menuMobile:false,
+        scrolled: false,
+        init() {
+            this.scrolled = window.scrollY > 50
+        }
+    }"
+    :class="scrolled?'bg-blue-900/70 backdrop-blur-sm shadow-md':''"
+    @scroll.window="scrolled = window.scrollY > 50"
+>
     <nav class="px-4 lg:px-6 py-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
             <a href="/" class="flex items-center">

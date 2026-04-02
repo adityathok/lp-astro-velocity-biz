@@ -91,12 +91,12 @@ const itemsUlasan = [
             Kami mendapatkan 1.200 ulasan di google maps bintang 5
         </p>
 
-        <div class="overflow-hidden marquee-container">
+        <div class="overflow-hidden py-2 marquee-container">
             <div class="marquee-track flex text-sm md:text-lg">
                 <div class="marquee-content flex">
                     {itemsUlasan.map((item) => (
-                        <div class="py-2 px-3 w-10 xl:w-110">
-                            <div class="group shadow-md hover:shadow-lg rounded-xl p-4 md:p-8 min-h-65" x-data={`{ testi: ${JSON.stringify(item.testimonial)} }`}>
+                        <div class="py-2 px-3 w-[90vw] md:w-[50vw] xl:w-110">
+                            <div class="group shadow-md hover:shadow-lg rounded-xl p-4 md:p-8 xl:min-h-65" x-data={`{ testi: ${JSON.stringify(item.testimonial)} }`}>
                                 <div class="flex items-center gap-3 border-b border-slate-300 mb-4 pb-4">
                                     <Image src={ImgAvatarDefault} class="h-10 w-10 object-cover rounded-full" alt={item.title} loading="lazy"/>
                                     <div>
@@ -127,7 +127,7 @@ const itemsUlasan = [
                 </div>
                 <div class="marquee-content flex">
                     {itemsUlasan.map((item) => (
-                        <div class="py-2 px-3 w-10 xl:w-110">
+                        <div class="py-2 px-3 w-[90vw] md:w-[50vw] xl:w-110">
                             <div class="group shadow-md hover:shadow-lg rounded-xl p-4 md:p-8 min-h-65" x-data={`{ testi: ${JSON.stringify(item.testimonial)} }`}>
                                 <div class="flex items-center gap-3 border-b border-slate-300 mb-4 pb-4">
                                     <Image src={ImgAvatarDefault} class="h-10 w-10 object-cover rounded-full" alt={item.title} loading="lazy"/>

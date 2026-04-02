@@ -31,12 +31,18 @@ const menuHeader = [
     x-data="{
         menuMobile:false,
         scrolled: false,
-        init() {
-            this.scrolled = window.scrollY > 50
+        _ticking: false,
+        handleScroll() {
+            if (this._ticking) return
+            this._ticking = true
+            requestAnimationFrame(() => {
+                this.scrolled = window.scrollY > 50
+                this._ticking = false
+            })
         }
     }"
-    :class="scrolled?'bg-blue-900/70 backdrop-blur-sm shadow-md':''"
-    @scroll.window="scrolled = window.scrollY > 50"
+    :class="scrolled?'bg-blue-900/70 backdrop-blur-md shadow-md':''"
+    @scroll.window="handleScroll"
 >
     <nav class="px-4 lg:px-6 py-4">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-7xl">

@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<Layout
+    title="Pembayaran"
+>
+    <PageHeader title="Pembayaran"></PageHeader>
+    
+    <div class="mx-auto max-w-7xl md:min-h-0 p-6 xl:min-h-[40vh]">
+        
+        <div class="rich-text text-center">
+            Pembayaran bisa dilakukan ke bank berikut ini:
+            <br><br>
+            BCA<br>
+            No. Rek: 0301545796<br>
+            Atas Nama: CV. VELOCITY DEVELOPER INDONESIA
+        </div>
+
+    </div>
+</Layout>
+
+<style>
+    .rich-text p {
+        line-height: 1.6;
+        margin-bottom: .5rem;
+    }
+</style>

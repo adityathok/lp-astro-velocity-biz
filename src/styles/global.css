@@ -31,3 +31,41 @@
   font-style: normal;
   font-display: swap;
 }
+
+.marquee-container {
+    overflow: hidden;
+    width: 100%; /* Atau sesuaikan dengan kebutuhan */
+    
+    /* Efek Faded menggunakan Linear Gradient */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+.marquee-track {
+    width: max-content;
+    animation: marquee 25s linear infinite;
+}
+.marquee-track:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

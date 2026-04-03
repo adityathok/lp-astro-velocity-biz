@@ -30,11 +30,15 @@ const faqs = [
     answer: "Ada, kami bantu anda lewat wa, telpon, maupun berbagi layar komputer, sesuai permintaan anda."
   },
   {
+    question: "Apakah hosting benar-benar unlimited ?",
+    answer: "Ya, hosting Unlimited tidak ada batasan dari kapasitas hostingnya. Pembatasan dari jumlah inodes di hostingnya."
+  },
+  {
     question: "Apakah dibantu perbaikan jika web kena hacker?",
     answer: "Ya, kami bantu perbaikan jika kena hacker"
   },
   {
-    question: "Jika website rusak/error bagaimana?.",
+    question: "Jika website rusak/error bagaimana?",
     answer: "akan dibantu mengatasi kerusakan oleh tim support kami, tim support kami online setiap hari tanpa libur"
   },
   {
@@ -69,7 +73,11 @@ const faqs = [
                             {item.question}
                         </div>
                     </button>
-                    <div x-show={`open === ${i}`} x-transition class="px-6 pb-6 text-slate-600 text-sm">
+                    <div 
+                      x-show={`open === ${i}`} 
+                      x-transition
+                      class="px-6 pb-6 text-slate-600 text-sm"
+                    >
                         {item.answer}
                     </div>
                 </div>
